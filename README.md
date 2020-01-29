@@ -1,55 +1,55 @@
 **How to use this template**
 
-- Put your bindings in `src/ReactNativeSomething` & rename accordingly or use
+- Put your bindings in `src/ReactNativeViewPager` & rename accordingly or use
   `bsconfig.json` `"namespace"` field (more on this below),
 - Update all occurences of
 
-  - `@reason-react-native/__template__`
-  - `https://github.com/reason-react-native/__template__`
-  - `__template__`
-  - `@react-native-community/something`
-  - `https://github.com/react-native-community/something`
-  - `ReactNativeSomething`. If you have more than a file exposed, you should
+  - `@reason-react-native/viewpager`
+  - `https://github.com/reason-react-native/viewpager`
+  - `viewpager`
+  - `@react-native-community/viewpager`
+  - `https://github.com/react-native-community/react-native-viewpager`
+  - `ReactNativeViewPager`. If you have more than a file exposed, you should
     consider using BuckleScript custom namespace by adjusting `bsconfig.json`
     and adding a `"namespace": "react-native-something"` (note that it will be
-    converted to `ReactNativeSomething`)
+    converted to `ReactNativeViewPager`)
 
-- Add your `@react-native-community/something` (adjusted) in `peerDependencies`
+- Add your `@react-native-community/viewpager` (adjusted) in `peerDependencies`
   & `devDependencies` section
 - Adjust the changelog (and/or clean it)
 - Remove this part ⬆ & keep everything below ⬇
 
 ---
 
-# `@reason-react-native/__template__`
+# `@reason-react-native/viewpager`
 
-[![Build Status](https://github.com/reason-react-native/__template__/workflows/Build/badge.svg)](https://github.com/reason-react-native/__template__/actions)
-[![Version](https://img.shields.io/npm/v/@reason-react-native/__template__.svg)](https://www.npmjs.com/@reason-react-native/__template__)
+[![Build Status](https://github.com/reason-react-native/viewpager/workflows/Build/badge.svg)](https://github.com/reason-react-native/viewpager/actions)
+[![Version](https://img.shields.io/npm/v/@reason-react-native/viewpager.svg)](https://www.npmjs.com/@reason-react-native/viewpager)
 [![Chat](https://img.shields.io/discord/235176658175262720.svg?logo=discord&colorb=blue)](https://reasonml-community.github.io/reason-react-native/discord/)
 
 [ReasonML](https://reasonml.github.io) /
 [BuckleScript](https://bucklescript.github.io) bindings for
-[`@react-native-community/something`](https://github.com/react-native-community/something).
+[`@react-native-community/viewpager`](https://github.com/react-native-community/react-native-viewpager).
 
-Exposed as `ReactNativeSomething` module.
+Exposed as `ReactNativeViewPager` module.
 
-`@reason-react-native/__template__` X.y._ means it's compatible with
-`@react-native-community/something` X.y._
+`@reason-react-native/viewpager` X.y._ means it's compatible with
+`@react-native-community/viewpager` X.y._
 
 ## Installation
 
 When
-[`@react-native-community/something`](https://github.com/react-native-community/something)
+[`@react-native-community/viewpager`](https://github.com/react-native-community/react-native-viewpager)
 is properly installed & configured by following their installation instructions,
 you can install the bindings:
 
 ```console
-npm install @reason-react-native/__template__
+npm install @reason-react-native/viewpager
 # or
-yarn add @reason-react-native/__template__
+yarn add @reason-react-native/viewpager
 ```
 
-`@reason-react-native/__template__` should be added to `bs-dependencies` in your
+`@reason-react-native/viewpager` should be added to `bs-dependencies` in your
 `bsconfig.json`. Something like
 
 ```diff
@@ -59,7 +59,7 @@ yarn add @reason-react-native/__template__
     "reason-react",
     "reason-react-native",
     // ...
-+    "@reason-react-native/__template__"
++    "@reason-react-native/viewpager"
   ],
   //...
 }
@@ -69,13 +69,13 @@ yarn add @reason-react-native/__template__
 
 ### Types
 
-#### `ReactNativeSomething.t`
+#### `ReactNativeViewPager.t`
 
 ...
 
 ### Methods
 
-#### `ReactNativeSomething.method`
+#### `ReactNativeViewPager.method`
 
 ...
 
