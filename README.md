@@ -1,26 +1,3 @@
-**How to use this template**
-
-- Put your bindings in `src/ReactNativeViewPager` & rename accordingly or use
-  `bsconfig.json` `"namespace"` field (more on this below),
-- Update all occurences of
-
-  - `@reason-react-native/viewpager`
-  - `https://github.com/reason-react-native/viewpager`
-  - `viewpager`
-  - `@react-native-community/viewpager`
-  - `https://github.com/react-native-community/react-native-viewpager`
-  - `ReactNativeViewPager`. If you have more than a file exposed, you should
-    consider using BuckleScript custom namespace by adjusting `bsconfig.json`
-    and adding a `"namespace": "react-native-something"` (note that it will be
-    converted to `ReactNativeViewPager`)
-
-- Add your `@react-native-community/viewpager` (adjusted) in `peerDependencies`
-  & `devDependencies` section
-- Adjust the changelog (and/or clean it)
-- Remove this part ⬆ & keep everything below ⬇
-
----
-
 # `@reason-react-native/viewpager`
 
 [![Build Status](https://github.com/reason-react-native/viewpager/workflows/Build/badge.svg)](https://github.com/reason-react-native/viewpager/actions)
@@ -67,17 +44,63 @@ yarn add @reason-react-native/viewpager
 
 ## Usage
 
+```reason
+[@react.component]
+let app = () =>
+    <SafeAreaView style={styles##body}>
+      <ReactNativeViewPager style={styles##body}
+        initialPage=1
+        pageMargin=13
+        transitionStyle={`curl}
+        showPageIndicator=true
+        >
+        <View style={styles##red}/>
+        <View style={styles##blue}/>
+        <View style={styles##green}/>
+      </ReactNativeViewPager>
+    </SafeAreaView>;
+```
+
 ### Types
 
 #### `ReactNativeViewPager.t`
 
-...
+```reason
+~ref: ref=?,
+~initialPage: int=?,
+~scrollEnabled: bool=?,
+~onPageScroll: ReactNative.Event.syntheticEvent(scrollEvent) => unit=?,
+~onPageSelected: ReactNative.Event.syntheticEvent(selectedEvent) => unit=?,
+~onPageScrollStateChanged: ReactNative.Event.syntheticEvent(
+                             scrollStateChangedEvent,
+                           ) =>
+                           unit
+                             =?,
+~keyboardDismissMode: [@bs.string] [ | `none | [@bs.as "on-drag"] `onDrag]
+                        =?,
+~pageMargin: int=?,
+~onMoveShouldSetResponderCapture: ReactNative.Event.pressEvent => bool=?,
+~style: ReactNative.Style.t=?,
+~children: React.element=?,
+~orientation: [@bs.string] [ | `horizontal | `vertical]=?,
+~transitionStyle: [@bs.string] [ | `scroll | `curl]=?,
+~showPageIndicator: bool=?
+```
 
 ### Methods
 
-#### `ReactNativeViewPager.method`
+#### `ReactNativeViewPager.setPage`
 
-...
+```reason
+setPage: (T.t, int) => unit = "setPage";
+```
+
+#### `ReactNativeViewPager.setPage`
+
+```reason
+setPageWithoutAnimation: (T.t, int) => unit =
+    "setPageWithoutAnimation";
+```
 
 ---
 
