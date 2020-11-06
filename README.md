@@ -4,14 +4,13 @@
 [![Version](https://img.shields.io/npm/v/@reason-react-native/viewpager.svg)](https://www.npmjs.com/@reason-react-native/viewpager)
 [![Chat](https://img.shields.io/discord/235176658175262720.svg?logo=discord&colorb=blue)](https://reasonml-community.github.io/reason-react-native/discord/)
 
-[ReasonML](https://reasonml.github.io) /
-[BuckleScript](https://bucklescript.github.io) bindings for
+[ReScript](https://rescript-lang.org) / [Reason](https://reasonml.github.io) bindings for
 [`@react-native-community/viewpager`](https://github.com/react-native-community/react-native-viewpager).
 
 Exposed as `ReactNativeViewPager` module.
 
-`@reason-react-native/viewpager` X.y._ means it's compatible with
-`@react-native-community/viewpager` X.y._
+`@reason-react-native/viewpager` X.y.\* means it's compatible with
+`@react-native-community/viewpager` X.y.\*
 
 ## Installation
 
@@ -27,7 +26,7 @@ yarn add @reason-react-native/viewpager
 ```
 
 `@reason-react-native/viewpager` should be added to `bs-dependencies` in your
-`bsconfig.json`. Something like
+`bsconfig.json`:
 
 ```diff
 {
@@ -61,23 +60,16 @@ let app = () =>
     </SafeAreaView>;
 ```
 
-### Types
-
-#### `ReactNativeViewPager.t`
+#### `ReactNativeViewPager` props
 
 ```reason
 ~ref: ref=?,
 ~initialPage: int=?,
 ~scrollEnabled: bool=?,
-~onPageScroll: ReactNative.Event.syntheticEvent(scrollEvent) => unit=?,
-~onPageSelected: ReactNative.Event.syntheticEvent(selectedEvent) => unit=?,
-~onPageScrollStateChanged: ReactNative.Event.syntheticEvent(
-                             scrollStateChangedEvent,
-                           ) =>
-                           unit
-                             =?,
-~keyboardDismissMode: [@bs.string] [ | `none | [@bs.as "on-drag"] `onDrag]
-                        =?,
+~onPageScroll: PageScrollEvent.t => unit=?,
+~onPageSelected: PageSelectedEvent.t => unit=?,
+~onPageScrollStateChanged: PageScrollStateChangedEvent.t => unit=?,
+~keyboardDismissMode: [@bs.string] [ | `none | [@bs.as "on-drag"] `onDrag]=?,
 ~pageMargin: int=?,
 ~onMoveShouldSetResponderCapture: ReactNative.Event.pressEvent => bool=?,
 ~style: ReactNative.Style.t=?,
