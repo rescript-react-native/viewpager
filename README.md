@@ -5,7 +5,7 @@
 [![Chat](https://img.shields.io/discord/235176658175262720.svg?logo=discord&colorb=blue)](https://reasonml-community.github.io/reason-react-native/discord/)
 
 [ReScript](https://rescript-lang.org) / [Reason](https://reasonml.github.io) bindings for
-[`@react-native-community/viewpager`](https://github.com/react-native-community/react-native-viewpager).
+[`@react-native-community/viewpager`](https://github.com/callstack/react-native-viewpager).
 
 Exposed as `ReactNativeViewPager` module.
 
@@ -15,7 +15,7 @@ Exposed as `ReactNativeViewPager` module.
 ## Installation
 
 When
-[`@react-native-community/viewpager`](https://github.com/react-native-community/react-native-viewpager)
+[`@react-native-community/viewpager`](https://github.com/callstack/react-native-viewpager)
 is properly installed & configured by following their installation instructions,
 you can install the bindings:
 
