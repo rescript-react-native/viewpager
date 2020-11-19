@@ -44,7 +44,8 @@ external make:
     ~children: React.element=?,
     ~orientation: [ | `horizontal | `vertical]=?,
     ~transitionStyle: [ | `scroll | `curl]=?,
-    ~showPageIndicator: bool=?
+    ~showPageIndicator: bool=?,
+    ~overScrollMode: ScrollView.overScrollMode=?
   ) =>
   React.element =
   "default";
