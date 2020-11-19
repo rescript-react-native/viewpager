@@ -2,6 +2,6 @@
 
 var ViewPagerMethods = require("./ViewPagerMethods.bs.js");
 
-ViewPagerMethods.Make({ });
+ViewPagerMethods.Make({});
 
 /*  Not a pure module */

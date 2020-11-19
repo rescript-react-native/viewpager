@@ -1,5 +1,5 @@
 type element;
-type ref = React.Ref.t(Js.nullable(element));
+type ref = React.ref(Js.nullable(element));
 
 include ViewPagerMethods.Make({
   type t = element;

@@ -1,6 +1,21 @@
 'use strict';
 
 var ViewPagerElement = require("./ViewPagerElement.bs.js");
+var Event$ReactNative = require("reason-react-native/src/apis/Event.bs.js");
 
+Event$ReactNative.SyntheticEvent({});
 
-/* ViewPagerElement Not a pure module */
+var PageScrollEvent = {};
+
+Event$ReactNative.SyntheticEvent({});
+
+var PageSelectedEvent = {};
+
+Event$ReactNative.SyntheticEvent({});
+
+var PageScrollStateChangedEvent = {};
+
+exports.PageScrollEvent = PageScrollEvent;
+exports.PageSelectedEvent = PageSelectedEvent;
+exports.PageScrollStateChangedEvent = PageScrollStateChangedEvent;
+/*  Not a pure module */
