@@ -1,7 +1,7 @@
 'use strict';
 
 var ViewPagerElement = require("./ViewPagerElement.bs.js");
-var Event$ReactNative = require("reason-react-native/src/apis/Event.bs.js");
+var Event$ReactNative = require("rescript-react-native/src/apis/Event.bs.js");
 
 Event$ReactNative.SyntheticEvent({});
 
